@@ -14,6 +14,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication
 @ComponentScan(basePackages = {
     "authentication.configuration",
+    "authentication.controller",
     "authentication.model",
     "authentication.repository",
     "authentication.service"

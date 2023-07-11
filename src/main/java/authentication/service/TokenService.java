@@ -34,4 +34,11 @@ public class TokenService
                 ).sign(Algorithm.HMAC256(jwtSecret));   
     }
     
+    public String getSubject(String token)
+    {
+        return JWT.require(Algorithm.HMAC256(jwtSecret))
+                .withIssuer("Authentication")
+                .build().verify(token).getSubject();
+    }
+    
 }
